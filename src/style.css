@@ -2,11 +2,7 @@ body {
   font-family: "Roboto Slab", serif, system-ui, -apple-system,
     BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
     "Open Sans", "Helvetica Neue", sans-serif;
-  background-color: rgb(218, 218, 218);
-  background-image: url(../src/images/background.jpg);
-  background-repeat: no-repeat;
-  /*   background-size: 100vw 100vh; */
-  background-size: cover;
+  background-color: rgb(199, 199, 199, 0.9);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -56,7 +52,7 @@ header {
   flex-direction: column;
   width: 90%;
   border-radius: 5px;
-  background-color: rgba(216, 216, 216, 0.9);
+  background-color: rgba(216, 216, 216);
   align-items: center;
   gap: 30px;
   padding-bottom: 20px;
@@ -72,6 +68,10 @@ p {
 
 .home-intro-text {
   margin-inline: 300px;
+  padding: 30px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 60px;
 }
 
 .home-header {
@@ -82,32 +82,40 @@ p {
 
 .home-header-wrapper {
   position: relative;
+  margin-bottom: 60px;
 }
 
 .home-header-established {
   position: absolute;
   font-family: "Dancing Script", cursive;
   font-size: 1.3rem;
-  bottom: -8%;
-  left: 80%;
+  bottom: -4%;
+  left: 75%;
   color: rgb(68, 67, 67);
+}
+
+.business-logo {
+  border-radius: 5px;
 }
 
 .grandfather-img {
   height: 400px;
   width: 500px;
   border-radius: 10px;
+  margin-bottom: 60px;
 }
 
 .opening-hours-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   background-color: rgba(255, 255, 255, 0.7);
   border-radius: 10px;
   padding-block: 20px;
   padding-inline: 60px;
   backdrop-filter: blur(10px);
+  margin-top: 30px;
 }
 
 img {

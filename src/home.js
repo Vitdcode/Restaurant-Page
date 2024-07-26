@@ -3,6 +3,8 @@ import pastaimage1 from "../src/images/pasta1.jpg";
 import pastaimage2 from "../src/images/pasta2.jpg";
 import pizzaimage1 from "../src/images/pizza1.jpg";
 import pizzaimage2 from "../src/images/pizza2.jpg";
+import businesslogo from "../src/images/logo.jpeg";
+import signature from "../src/images/signature.png";
 
 export default function home() {
   const content = document.querySelector("#content");
@@ -14,14 +16,18 @@ export default function home() {
   headerWrapper.classList.add("home-header-wrapper");
   const homeHeader = document.createElement("h2");
   const homeHeaderEstablished = document.createElement("h4");
+  const businessLogo = document.createElement("img");
 
   homeHeaderEstablished.classList.add("home-header-established");
   homeHeader.classList.add("home-header");
+  businessLogo.classList.add("business-logo");
+  businessLogo.src = businesslogo;
   homeHeader.textContent = "Original Italian Cuisine";
   homeHeaderEstablished.textContent = "Est. 1912";
 
   headerWrapper.appendChild(homeHeader);
   headerWrapper.appendChild(homeHeaderEstablished);
+  headerWrapper.appendChild(businessLogo);
 
   //main content
   const intro = document.createElement("p");
@@ -94,6 +100,5 @@ export default function home() {
   content.appendChild(intro);
   content.appendChild(grandfatherImg);
   content.appendChild(notConvincedText);
-  /* content.appendChild(openingHoursWrapper); */
   content.appendChild(openingHoursAndFoodImagesWrapper);
 }
