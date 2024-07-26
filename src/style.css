@@ -1,37 +1,48 @@
 body {
-  background-color: rgb(23, 103, 224);
-  background-image: url(../src/images/background.jpg);
+  font-family: "Roboto Slab", serif, system-ui, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
+    "Open Sans", "Helvetica Neue", sans-serif;
+  background-color: rgb(218, 218, 218);
+  /* background-image: url(../src/images/background.jpg);
   background-repeat: no-repeat;
-  background-size: 100vw 100vh;
+  background-size: 100vw 100vh; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
 }
 header {
   display: flex;
-  justify-content: end;
-  margin-right: 50px;
-  gap: 40px;
-}
-
-header > button {
-  height: 50px;
-  width: 100px;
-  outline: transparent;
-  background-color: rgb(255, 255, 255, 0);
-  border: none;
-  /*  border-bottom: 2px solid rgb(173, 23, 31); */
-  color: rgb(173, 23, 31);
-  font-size: 1.8rem;
-  text-shadow: 2px 0px 2px rgb(173, 23, 31);
+  gap: 50px;
+  margin-top: 40px;
 }
 
 #home-button,
 #menu-button,
 #about-button {
+  font-family: "Open Sans", sans-serif;
   display: inline-block;
-  color: rgb(173, 23, 31);
+  color: rgb(196, 12, 12);
   text-decoration: none;
+  cursor: pointer;
+  height: 50px;
+  width: 100px;
+  outline: transparent;
+  background-color: rgb(255, 255, 255, 0);
+  border: none;
+  font-size: 2rem;
+  font-weight: bold;
+  text-shadow: 3px 0px 2px rgb(173, 23, 31);
 }
 
-#home-button::after,
+#home-button:hover,
+#menu-button:hover,
+#about-button:hover {
+  color: rgb(248, 54, 54);
+  text-shadow: 3px 0px 2px rgb(248, 54, 54);
+}
+
+/* #home-button::after,
 #menu-button::after,
 #about-button::after {
   content: "";
@@ -46,4 +57,19 @@ header > button {
 #about-button:hover::after {
   width: 100%;
   transition: width 0.3s;
+} */
+
+#content {
+  display: flex;
+  height: 90vh;
+  width: 90%;
+  border-radius: 5px;
+  background-color: rgba(233, 233, 233, 0.9);
+  justify-content: center;
+}
+
+.home-header {
+  font-family: "Dancing Script", cursive;
+  font-size: 3rem;
+  color: rgb(173, 23, 31);
 }

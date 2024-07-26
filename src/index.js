@@ -1,3 +1,4 @@
 import "./style.css";
+import home from "./home.js";
 
-console.log("This is a testt");
+home();
