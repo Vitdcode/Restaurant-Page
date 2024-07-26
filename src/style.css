@@ -1,0 +1,49 @@
+body {
+  background-color: rgb(23, 103, 224);
+  background-image: url(../src/images/background.jpg);
+  background-repeat: no-repeat;
+  background-size: 100vw 100vh;
+}
+header {
+  display: flex;
+  justify-content: end;
+  margin-right: 50px;
+  gap: 40px;
+}
+
+header > button {
+  height: 50px;
+  width: 100px;
+  outline: transparent;
+  background-color: rgb(255, 255, 255, 0);
+  border: none;
+  /*  border-bottom: 2px solid rgb(173, 23, 31); */
+  color: rgb(173, 23, 31);
+  font-size: 1.8rem;
+  text-shadow: 2px 0px 2px rgb(173, 23, 31);
+}
+
+#home-button,
+#menu-button,
+#about-button {
+  display: inline-block;
+  color: rgb(173, 23, 31);
+  text-decoration: none;
+}
+
+#home-button::after,
+#menu-button::after,
+#about-button::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: rgb(173, 23, 31);
+  transition: width 0.3s;
+}
+#home-button:hover::after,
+#menu-button:hover::after,
+#about-button:hover::after {
+  width: 100%;
+  transition: width 0.3s;
+}
