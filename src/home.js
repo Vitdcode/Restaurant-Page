@@ -1,17 +1,18 @@
 import grandfatherImage from "../src/images/grandfather.jpg";
-import pastaimage1 from "../src/images/pasta1.jpg";
-import pastaimage2 from "../src/images/pasta2.jpg";
-import pizzaimage1 from "../src/images/pizza1.jpg";
-import pizzaimage2 from "../src/images/pizza2.jpg";
 import businesslogo from "../src/images/logo.jpeg";
-import signature from "../src/images/signature.png";
 
 export default function home() {
   const content = document.querySelector("#content");
   const homeButton = document.querySelector("#home-button");
+  const menuButton = document.querySelector("#menu-button");
+
+  content.innerHTML = "";
+
+  homeButton.style.borderBottom = "3px solid rgb(173, 23, 31)";
+  menuButton.style.borderBottom = "none";
 
   //header
-  homeButton.style.borderBottom = "3px solid red";
+
   const headerWrapper = document.createElement("div");
   headerWrapper.classList.add("home-header-wrapper");
   const homeHeader = document.createElement("h2");
@@ -71,34 +72,9 @@ export default function home() {
   openingHoursWrapper.appendChild(openingHoursFriday);
   openingHoursWrapper.appendChild(openingHoursSaturday);
 
-  const pastaImgWrapper = document.createElement("div");
-  pastaImgWrapper.classList.add("pasta-img-wrapper");
-  const pizzaImgWrapper = document.createElement("div");
-  pizzaImgWrapper.classList.add("pizza-img-wrapper");
-  const openingHoursAndFoodImagesWrapper = document.createElement("div");
-  openingHoursAndFoodImagesWrapper.classList.add('opening-hours-food-img-wrapper-home'); //prettier-ignore
-  const pastaImg1 = document.createElement("img");
-  const pastaImg2 = document.createElement("img");
-  const pizzaImg1 = document.createElement("img");
-  const pizzaImg2 = document.createElement("img");
-
-  pastaImg1.src = pastaimage1;
-  pastaImg2.src = pastaimage2;
-  pizzaImg1.src = pizzaimage1;
-  pizzaImg2.src = pizzaimage2;
-
-  pastaImgWrapper.appendChild(pastaImg1);
-  pastaImgWrapper.appendChild(pastaImg2);
-  pizzaImgWrapper.appendChild(pizzaImg1);
-  pizzaImgWrapper.appendChild(pizzaImg2);
-
-  openingHoursAndFoodImagesWrapper.appendChild(pastaImgWrapper);
-  openingHoursAndFoodImagesWrapper.appendChild(openingHoursWrapper);
-  openingHoursAndFoodImagesWrapper.appendChild(pizzaImgWrapper);
-
   content.appendChild(headerWrapper);
   content.appendChild(intro);
   content.appendChild(grandfatherImg);
   content.appendChild(notConvincedText);
-  content.appendChild(openingHoursAndFoodImagesWrapper);
+  content.appendChild(openingHoursWrapper);
 }
