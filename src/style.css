@@ -3,36 +3,45 @@ body {
     BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
     "Open Sans", "Helvetica Neue", sans-serif;
   background-color: rgb(218, 218, 218);
-  /* background-image: url(../src/images/background.jpg);
+  background-image: url(../src/images/background.jpg);
   background-repeat: no-repeat;
-  background-size: 100vw 100vh; */
+  /*   background-size: 100vw 100vh; */
+  background-size: cover;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 40px;
 }
+
+/* Buttons */
 header {
   display: flex;
   gap: 50px;
   margin-top: 40px;
+  background-color: rgba(216, 216, 216, 0.9);
+  border-radius: 10px;
+  padding: 10px;
 }
 
 #home-button,
 #menu-button,
 #about-button {
   font-family: "Open Sans", sans-serif;
-  display: inline-block;
+  display: flex;
   color: rgb(196, 12, 12);
   text-decoration: none;
   cursor: pointer;
   height: 50px;
   width: 100px;
   outline: transparent;
-  background-color: rgb(255, 255, 255, 0);
+  background-color: rgba(184, 21, 88, 0);
   border: none;
   font-size: 2rem;
   font-weight: bold;
   text-shadow: 3px 0px 2px rgb(173, 23, 31);
+
+  transition-duration: 150ms;
+  justify-content: center;
 }
 
 #home-button:hover,
@@ -42,34 +51,88 @@ header {
   text-shadow: 3px 0px 2px rgb(248, 54, 54);
 }
 
-/* #home-button::after,
-#menu-button::after,
-#about-button::after {
-  content: "";
-  display: block;
-  width: 0;
-  height: 2px;
-  background: rgb(173, 23, 31);
-  transition: width 0.3s;
-}
-#home-button:hover::after,
-#menu-button:hover::after,
-#about-button:hover::after {
-  width: 100%;
-  transition: width 0.3s;
-} */
-
 #content {
   display: flex;
-  height: 90vh;
+  flex-direction: column;
   width: 90%;
   border-radius: 5px;
-  background-color: rgba(233, 233, 233, 0.9);
-  justify-content: center;
+  background-color: rgba(216, 216, 216, 0.9);
+  align-items: center;
+  gap: 30px;
+  padding-bottom: 20px;
+}
+
+/* home-content */
+
+p {
+  font-family: "Dancing Script", cursive;
+  font-size: 1.9rem;
+  color: rgb(68, 67, 67);
+}
+
+.home-intro-text {
+  margin-inline: 300px;
 }
 
 .home-header {
   font-family: "Dancing Script", cursive;
   font-size: 3rem;
   color: rgb(173, 23, 31);
+}
+
+.home-header-wrapper {
+  position: relative;
+}
+
+.home-header-established {
+  position: absolute;
+  font-family: "Dancing Script", cursive;
+  font-size: 1.3rem;
+  bottom: -8%;
+  left: 80%;
+  color: rgb(68, 67, 67);
+}
+
+.grandfather-img {
+  height: 400px;
+  width: 500px;
+  border-radius: 10px;
+}
+
+.opening-hours-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 10px;
+  padding-block: 20px;
+  padding-inline: 60px;
+  backdrop-filter: blur(10px);
+}
+
+img {
+  height: 350px;
+  width: 400px;
+  border-radius: 5px;
+}
+
+.opening-hours-food-img-wrapper-home {
+  display: flex;
+  gap: 100px;
+}
+
+.pasta-img-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  padding: 30px;
+  border-radius: 15px;
+}
+
+.pizza-img-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  padding: 30px;
+  border-radius: 15px;
 }
