@@ -1,7 +1,7 @@
 import grandfatherImage from "../src/images/grandfather.jpg";
 import businesslogo from "../src/images/logo.jpeg";
 import quoteimage from "../src/images/quote.png";
-import { reviews1to3 } from "./review.js";
+import { reviews } from "./review.js";
 
 export default function home() {
   const content = document.querySelector("#content");
@@ -68,41 +68,14 @@ export default function home() {
   const notConvincedText = document.createElement("p");
   notConvincedText.textContent =
     "Still not convinced? Take a look at the reviews";
+  notConvincedText.classList.add("not-convinced-text");
 
   const review1Wrapper = document.createElement("div");
-
-  const openingHoursWrapper = document.createElement("div");
-  openingHoursWrapper.classList.add("opening-hours-wrapper");
-  const openingHoursHeadline = document.createElement("p");
-  openingHoursHeadline.classList.add("opening-hours-header");
-  const openingHoursMonday = document.createElement("p");
-  const openingHoursTuesday = document.createElement("p");
-  const openingHoursWednesday = document.createElement("p");
-  const openingHoursThursday = document.createElement("p");
-  const openingHoursFriday = document.createElement("p");
-  const openingHoursSaturday = document.createElement("p");
-
-  openingHoursHeadline.textContent = "Opening Hours";
-  openingHoursMonday.textContent = "Monday: 17:00 - 21:00";
-  openingHoursTuesday.textContent = "Tuesday: 17:00 - 21:00";
-  openingHoursWednesday.textContent = "Wednesday: 17:00 - 21:00";
-  openingHoursThursday.textContent = "Thursday: 17:00 - 21:00";
-  openingHoursFriday.textContent = "Friday: 17:00 - 23:00";
-  openingHoursSaturday.textContent = "Saturday: 17:00 - 23:00";
-
-  openingHoursWrapper.appendChild(openingHoursHeadline);
-  openingHoursWrapper.appendChild(openingHoursMonday);
-  openingHoursWrapper.appendChild(openingHoursTuesday);
-  openingHoursWrapper.appendChild(openingHoursWednesday);
-  openingHoursWrapper.appendChild(openingHoursThursday);
-  openingHoursWrapper.appendChild(openingHoursFriday);
-  openingHoursWrapper.appendChild(openingHoursSaturday);
 
   content.appendChild(headerWrapper);
   content.appendChild(introAndQuoteImageWrapper);
   content.appendChild(grandfatherImageWrapper);
   content.appendChild(notConvincedText);
   content.appendChild(review1Wrapper);
-  reviews1to3(review1Wrapper);
-  content.appendChild(openingHoursWrapper);
+  reviews(review1Wrapper);
 }

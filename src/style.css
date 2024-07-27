@@ -136,11 +136,16 @@ h4 {
   background-color: rgba(255, 255, 255, 0.7);
   box-shadow: var(--boxshadowCardTemplate);
   border-radius: 10px;
+  margin-bottom: 60px;
 }
 
 .grandfather-image-text {
   margin-inline: 50px;
   font-size: 1.7rem;
+}
+
+.not-convinced-text {
+  font-size: 2.5rem;
 }
 
 .opening-hours-wrapper {
@@ -199,17 +204,28 @@ img {
   font-size: 2rem;
 }
 
-/* review content */
+.reviews-main-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 100px;
+}
+
+@media (max-width: 1160px) {
+  .reviews-main-wrapper {
+    grid-template-columns: 1fr;
+  }
+}
 
 .review-wrapper-1 {
   position: relative;
   display: flex;
   flex-direction: column;
-  background-color: rgb(52, 207, 189, 0.9);
+  background-color: rgba(218, 218, 218, 0.9);
   width: 430px;
   box-shadow: var(--boxshadowCardTemplate);
   align-items: center;
   border-radius: 10px;
+  backdrop-filter: brightness;
 }
 
 .review-user-image {
@@ -217,25 +233,41 @@ img {
   width: 64px;
   box-shadow: none;
   margin-top: 20px;
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 100%;
 }
 
 .five-stars-image {
   height: 70px;
   width: 270px;
   box-shadow: none;
-  margin-bottom: 90px;
+  margin-bottom: 50px;
+  margin-top: 30px;
 }
 
-.review-wrapper-1 p {
+.review-wrapper-1 p:nth-child(4) {
+  margin-top: 10px;
+  margin-bottom: 0;
+  font-size: 1.7rem;
+  font-weight: bold;
+  background-color: rgba(52, 170, 105, 0.5);
+  padding: 30px;
+  border-radius: 0 0 10px 10px;
+  text-wrap: balance;
+  backdrop-filter: blur(10px);
+  color: rgba(0, 0, 0, 0.767);
+}
+
+.review-wrapper-1 p:nth-child(2) {
   margin-top: 10px;
   font-size: 1.7rem;
-  margin-inline: 50px;
   font-weight: bold;
-  background-color: rgba(42, 255, 244, 0.349);
-  /*  background-color: rgba(42, 255, 244, 0.349); */
+  background-color: rgba(52, 170, 105, 0.5);
   padding: 10px;
   border-radius: 10px;
-  border: 1px solid rgb(5, 150, 105, 0.4);
+  text-wrap: balance;
+  backdrop-filter: blur(10px);
+  color: rgba(0, 0, 0, 0.767);
 }
 
 .review-quote-image {
